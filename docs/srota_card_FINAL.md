@@ -50,7 +50,7 @@ model-index:
 ---
 
 <div align="center">
-  <img src="https://huggingface.co/datasets/moorlee/qwen3-asr-0.6b-hinglish-assets/resolve/main/srota_banner.png" alt="Srota: Hinglish ASR" width="100%"/>
+  <img src="https://huggingface.co/datasets/moorlee/srota-assets/resolve/main/srota_banner.png" alt="Srota: Hinglish ASR" width="100%"/>
 </div>
 
 # Srota (श्रोत)
@@ -110,7 +110,7 @@ Try your own audio in the [live demo](https://huggingface.co/spaces/moorlee/hing
 ## 📊 Results
 
 <div align="center">
-  <img src="https://huggingface.co/datasets/moorlee/qwen3-asr-0.6b-hinglish-assets/resolve/main/srota_wer_comparison.png" alt="WER comparison: base vs v1 vs v2 vs Srota on HiACC and OpenSLR-104 test sets" width="80%"/>
+  <img src="https://huggingface.co/datasets/moorlee/srota-assets/resolve/main/srota_wer_comparison.png" alt="WER comparison: base vs v1 vs v2 vs Srota on HiACC and OpenSLR-104 test sets" width="80%"/>
 </div>
 
 <p align="center"><em>Grouped WER (%) on the HiACC (conversational) and OpenSLR-104 (tutorial) test sets: base model, the two single-domain fine-tunes (v1, v2), and Srota. Lower is better.</em></p>
@@ -220,7 +220,7 @@ Srota is a **full-parameter fine-tune** of Qwen3-ASR-0.6B: no frozen layers, no 
 **Data format.** Targets use the language-agnostic prefix `language None<asr_text>...` (following Polyglot-Lion / Toshniwal et al., 2018), with transcripts kept in their natural mixed Devanagari + Latin script.
 
 <div align="center">
-  <img src="https://huggingface.co/datasets/moorlee/qwen3-asr-0.6b-hinglish-assets/resolve/main/training_curves.png" alt="Srota training curves: train/eval loss, gradient norm, learning rate" width="90%"/>
+  <img src="https://huggingface.co/datasets/moorlee/srota-assets/resolve/main/training_curves.png" alt="Srota training curves: train/eval loss, gradient norm, learning rate" width="90%"/>
 </div>
 
 <p align="center"><em>Training/eval loss, gradient norm, and learning rate over 3,352 steps; eval_loss bottoms out at step 3200 (epoch 1.91) and stays flat, confirming 2 epochs.</em></p>

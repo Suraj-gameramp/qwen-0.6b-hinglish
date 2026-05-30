@@ -52,7 +52,7 @@ model-index:
 ---
 
 <div align="center">
-  <img src="https://huggingface.co/datasets/moorlee/qwen3-asr-0.6b-hinglish-assets/resolve/main/v2_banner.png" alt="Srota-Tutorial: Hinglish Tutorial ASR" width="100%"/>
+  <img src="https://huggingface.co/datasets/moorlee/srota-assets/resolve/main/v2_banner.png" alt="Srota-Tutorial: Hinglish Tutorial ASR" width="100%"/>
 </div>
 
 # Srota-Tutorial (श्रोत): Hinglish Tutorial Specialist (OpenSLR-104)
@@ -120,7 +120,7 @@ In **A**, the base ignores the actual short Hindi phrase and hallucinates a flue
 ## 📊 Results
 
 <div align="center">
-  <img src="https://huggingface.co/datasets/moorlee/qwen3-asr-0.6b-hinglish-assets/resolve/main/v2_wer_comparison.png" alt="WER comparison: base Qwen3-ASR-0.6B vs Srota-Tutorial on OpenSLR-104 (in-domain) and HiACC (cross-domain)" width="80%"/>
+  <img src="https://huggingface.co/datasets/moorlee/srota-assets/resolve/main/v2_wer_comparison.png" alt="WER comparison: base Qwen3-ASR-0.6B vs Srota-Tutorial on OpenSLR-104 (in-domain) and HiACC (cross-domain)" width="80%"/>
 </div>
 
 <p align="center"><em>WER (%) on OpenSLR-104 test (in-domain, tutorial) and HiACC test (cross-domain, conversational). Srota-Tutorial wins big in-domain (50.66 to 32.83) but loses badly out-of-domain (24.73 to 37.64, +12.91 pp WORSE than base). Lower is better.</em></p>
@@ -215,7 +215,7 @@ Srota-Tutorial is a **full-parameter fine-tune** of Qwen3-ASR-0.6B: no frozen la
 **Data format.** Targets use the language-agnostic prefix `language None<asr_text>...` (following Polyglot-Lion / Toshniwal et al., 2018), with transcripts kept in OpenSLR-104's native lowercase mixed Devanagari + Latin script.
 
 <div align="center">
-  <img src="https://huggingface.co/datasets/moorlee/qwen3-asr-0.6b-hinglish-assets/resolve/main/v2_training_curves.png" alt="Srota-Tutorial training curves: train/eval loss, gradient norm, learning rate" width="90%"/>
+  <img src="https://huggingface.co/datasets/moorlee/srota-assets/resolve/main/v2_training_curves.png" alt="Srota-Tutorial training curves: train/eval loss, gradient norm, learning rate" width="90%"/>
 </div>
 
 <p align="center"><em>Training/eval loss, gradient norm, and learning rate over 4,690 steps; eval_loss bottoms out at step 3000 (epoch 1.92, eval_loss 0.1436), with the later epoch showing no further improvement.</em></p>

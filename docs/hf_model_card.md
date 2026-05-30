@@ -41,7 +41,7 @@ model-index:
 ---
 
 <div align="center">
-  <img src="https://huggingface.co/datasets/moorlee/qwen3-asr-0.6b-hinglish-assets/resolve/main/v1_banner.png" alt="Srota-Conv: Hinglish Conversational Specialist" width="100%"/>
+  <img src="https://huggingface.co/datasets/moorlee/srota-assets/resolve/main/v1_banner.png" alt="Srota-Conv: Hinglish Conversational Specialist" width="100%"/>
 </div>
 
 # Srota-Conv (श्रोत): Hinglish Conversational Specialist
@@ -101,7 +101,7 @@ The base model collapses code-switched English into Devanagari transliteration; 
 ## 📊 Results
 
 <div align="center">
-  <img src="https://huggingface.co/datasets/moorlee/qwen3-asr-0.6b-hinglish-assets/resolve/main/v1_wer_comparison.png" alt="WER comparison: base vs Srota-Conv on HiACC test, overall and adult/child cohorts" width="80%"/>
+  <img src="https://huggingface.co/datasets/moorlee/srota-assets/resolve/main/v1_wer_comparison.png" alt="WER comparison: base vs Srota-Conv on HiACC test, overall and adult/child cohorts" width="80%"/>
 </div>
 
 <p align="center"><em>WER (%) on the HiACC conversational test set: base Qwen3-ASR-0.6B vs Srota-Conv, overall and by adult/child cohort. Lower is better.</em></p>
@@ -199,7 +199,7 @@ Srota-Conv is a **full-parameter fine-tune** of Qwen3-ASR-0.6B: no frozen layers
 | Seed | 42 (data shuffle) |
 
 <div align="center">
-  <img src="https://huggingface.co/datasets/moorlee/qwen3-asr-0.6b-hinglish-assets/resolve/main/v1_training_curves.png" alt="Srota-Conv training curves: train/eval loss, gradient norm, learning rate" width="90%"/>
+  <img src="https://huggingface.co/datasets/moorlee/srota-assets/resolve/main/v1_training_curves.png" alt="Srota-Conv training curves: train/eval loss, gradient norm, learning rate" width="90%"/>
 </div>
 
 <p align="center"><em>Training/eval loss, gradient norm, and learning rate over 565 steps; eval_loss bottoms out at step 350 (epoch 3.07, eval_loss 0.1917) and then drifts upward, so the early checkpoint is shipped.</em></p>
