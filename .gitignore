@@ -1,0 +1,39 @@
+# secrets
+.env
+.env.*
+.modal.toml
+
+# regenerable artifacts (large; pulled fresh from Modal or HF)
+scratch/
+dataset_samples/
+srota_assets/
+srota_assets_v1v2/
+srota_upload/
+
+# vendored upstream code (clone fresh from QwenLM/Qwen3-ASR)
+third_party/
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+.ipynb_checkpoints/
+
+# os
+.DS_Store
+Thumbs.db
+
+# editor
+.vscode/
+.idea/
+
+# claude
+.claude/
+
+# private/internal
+instruction_for_claude/
+
+# upstream research papers (copyrighted; download from arXiv/Zenodo yourself)
+research_paper/
