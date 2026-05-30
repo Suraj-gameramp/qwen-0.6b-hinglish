@@ -50,7 +50,7 @@ model-index:
 ---
 
 <div align="center">
-  <img src="https://huggingface.co/datasets/Surajgameramp/qwen3-asr-0.6b-hinglish-assets/resolve/main/srota_banner.png" alt="Srota: Hinglish ASR" width="100%"/>
+  <img src="https://huggingface.co/datasets/moorlee/qwen3-asr-0.6b-hinglish-assets/resolve/main/srota_banner.png" alt="Srota: Hinglish ASR" width="100%"/>
 </div>
 
 # Srota (श्रोत)
@@ -59,13 +59,13 @@ model-index:
 
 <div align="center">
 
-### ▶️ [Try Srota live in your browser](https://huggingface.co/spaces/Surajgameramp/hinglish-asr-demo) (no install, record or upload a clip)
+### ▶️ [Try Srota live in your browser](https://huggingface.co/spaces/moorlee/hinglish-asr-demo) (no install, record or upload a clip)
 
 </div>
 
 <div align="center">
 
-[![Demo](https://img.shields.io/badge/🤗_Demo-Hinglish_ASR-yellow)](https://huggingface.co/spaces/Surajgameramp/hinglish-asr-demo)
+[![Demo](https://img.shields.io/badge/🤗_Demo-Hinglish_ASR-yellow)](https://huggingface.co/spaces/moorlee/hinglish-asr-demo)
 [![Base model](https://img.shields.io/badge/Base-Qwen3--ASR--0.6B-6633cc)](https://huggingface.co/Qwen/Qwen3-ASR-0.6B)
 [![HiACC](https://img.shields.io/badge/Data-HiACC-green)](https://zenodo.org/records/15551669)
 [![OpenSLR-104](https://img.shields.io/badge/Data-OpenSLR--104-green)](https://openslr.org/104/)
@@ -82,7 +82,7 @@ Srota is an automatic speech recognition (ASR) model for **Hinglish** (Hindi-Eng
 
 **Project.** Built by the team behind [susrota.com](https://www.susrota.com/), a voice-dictation tool that currently runs in English. Srota will power its upcoming Hinglish support; the live product does not run this model yet.
 
-Try it in the [live demo](https://huggingface.co/spaces/Surajgameramp/hinglish-asr-demo).
+Try it in the [live demo](https://huggingface.co/spaces/moorlee/hinglish-asr-demo).
 
 ## ✨ Highlights
 
@@ -105,12 +105,12 @@ Real examples from the test set. The base Qwen3-ASR-0.6B transliterates English 
 
 The base collapses code-switched English into Devanagari transliteration; Srota preserves how Hinglish is actually written.
 
-Try your own audio in the [live demo](https://huggingface.co/spaces/Surajgameramp/hinglish-asr-demo).
+Try your own audio in the [live demo](https://huggingface.co/spaces/moorlee/hinglish-asr-demo).
 
 ## 📊 Results
 
 <div align="center">
-  <img src="https://huggingface.co/datasets/Surajgameramp/qwen3-asr-0.6b-hinglish-assets/resolve/main/srota_wer_comparison.png" alt="WER comparison: base vs v1 vs v2 vs Srota on HiACC and OpenSLR-104 test sets" width="80%"/>
+  <img src="https://huggingface.co/datasets/moorlee/qwen3-asr-0.6b-hinglish-assets/resolve/main/srota_wer_comparison.png" alt="WER comparison: base vs v1 vs v2 vs Srota on HiACC and OpenSLR-104 test sets" width="80%"/>
 </div>
 
 <p align="center"><em>Grouped WER (%) on the HiACC (conversational) and OpenSLR-104 (tutorial) test sets: base model, the two single-domain fine-tunes (v1, v2), and Srota. Lower is better.</em></p>
@@ -148,7 +148,7 @@ import torch
 from qwen_asr import Qwen3ASRModel
 
 model = Qwen3ASRModel.from_pretrained(
-    "Surajgameramp/qwen3-asr-0.6b-hinglish",
+    "moorlee/qwen3-asr-0.6b-hinglish",
     dtype=torch.bfloat16,
     device_map="cuda:0",
     attn_implementation="flash_attention_2",
@@ -163,7 +163,7 @@ print(results[0].text)
 - Audio should be mono; keep segments ≤ 30 s per call (chunk longer audio).
 - bf16 + FlashAttention 2 is recommended; `attn_implementation` can be dropped on CPU or older GPUs.
 
-No setup? Use the [hosted demo](https://huggingface.co/spaces/Surajgameramp/hinglish-asr-demo).
+No setup? Use the [hosted demo](https://huggingface.co/spaces/moorlee/hinglish-asr-demo).
 
 ## 🎯 Intended Use & Limitations of Use
 
@@ -220,7 +220,7 @@ Srota is a **full-parameter fine-tune** of Qwen3-ASR-0.6B: no frozen layers, no 
 **Data format.** Targets use the language-agnostic prefix `language None<asr_text>...` (following Polyglot-Lion / Toshniwal et al., 2018), with transcripts kept in their natural mixed Devanagari + Latin script.
 
 <div align="center">
-  <img src="https://huggingface.co/datasets/Surajgameramp/qwen3-asr-0.6b-hinglish-assets/resolve/main/training_curves.png" alt="Srota training curves: train/eval loss, gradient norm, learning rate" width="90%"/>
+  <img src="https://huggingface.co/datasets/moorlee/qwen3-asr-0.6b-hinglish-assets/resolve/main/training_curves.png" alt="Srota training curves: train/eval loss, gradient norm, learning rate" width="90%"/>
 </div>
 
 <p align="center"><em>Training/eval loss, gradient norm, and learning rate over 3,352 steps; eval_loss bottoms out at step 3200 (epoch 1.91) and stays flat, confirming 2 epochs.</em></p>
@@ -259,7 +259,7 @@ If you use Srota, please cite this model and the underlying works.
   title  = {Srota: A Hinglish ASR model fine-tuned from Qwen3-ASR-0.6B},
   author = {Suraj},
   year   = {2026},
-  url    = {https://huggingface.co/Surajgameramp/qwen3-asr-0.6b-hinglish}
+  url    = {https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish}
 }
 
 @article{shi2026qwen3asr,

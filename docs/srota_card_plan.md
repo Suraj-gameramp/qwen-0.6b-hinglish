@@ -1,7 +1,7 @@
 # Srota — Hugging Face Model Card BLUEPRINT (Planner output)
 
 > This is the **structural plan** the executor agent will follow to write the final
-> `README.md` for `Surajgameramp/srota`. It is NOT the final prose. Every section below
+> `README.md` for `moorlee/srota`. It is NOT the final prose. Every section below
 > specifies: what it contains, which figure/table/code goes there, exact facts to use,
 > and tone. Do not invent numbers — every metric is pinned here. Brand the model
 > **"Srota"** everywhere, but in the *first* mention and again in the Training Procedure /
@@ -113,7 +113,7 @@ Notes for executor:
 
 ### Section B — Badge / link row (centered, directly under banner)
 - A single centered row of shields.io-style badges. Recommended set (left→right):
-  1. **Demo** → `https://huggingface.co/spaces/Surajgameramp/hinglish-asr-demo` (color: blue/yellow HF)
+  1. **Demo** → `https://huggingface.co/spaces/moorlee/hinglish-asr-demo` (color: blue/yellow HF)
   2. **Base model: Qwen3-ASR-0.6B** → `https://huggingface.co/Qwen/Qwen3-ASR-0.6B`
   3. **Dataset: HiACC** → `https://zenodo.org/records/15551669`
   4. **Dataset: OpenSLR-104** → `https://openslr.org/104/`
@@ -122,7 +122,7 @@ Notes for executor:
   ```html
   <div align="center">
 
-  [![Demo](https://img.shields.io/badge/🤗_Demo-Hinglish_ASR-blue)](https://huggingface.co/spaces/Surajgameramp/hinglish-asr-demo)
+  [![Demo](https://img.shields.io/badge/🤗_Demo-Hinglish_ASR-blue)](https://huggingface.co/spaces/moorlee/hinglish-asr-demo)
   [![Base model](https://img.shields.io/badge/Base-Qwen3--ASR--0.6B-6633cc)](https://huggingface.co/Qwen/Qwen3-ASR-0.6B)
   [![HiACC](https://img.shields.io/badge/Data-HiACC-green)](https://zenodo.org/records/15551669)
   [![OpenSLR-104](https://img.shields.io/badge/Data-OpenSLR--104-green)](https://openslr.org/104/)
@@ -207,7 +207,7 @@ This is the centerpiece. Order matters:
   from qwen_asr import Qwen3ASRModel
 
   model = Qwen3ASRModel.from_pretrained(
-      "Surajgameramp/srota",
+      "moorlee/srota",
       dtype=torch.bfloat16,
       device_map="cuda:0",
       attn_implementation="flash_attention_2",
@@ -222,7 +222,7 @@ This is the centerpiece. Order matters:
     Pass it explicitly.
   - Audio should be mono; ≤30 s segments per call (longer audio should be chunked).
   - bf16 + FlashAttention 2 recommended; `attn_implementation` can be dropped on CPU/older GPUs.
-- One pointer line: "No setup? Use the [hosted demo](https://huggingface.co/spaces/Surajgameramp/hinglish-asr-demo)."
+- One pointer line: "No setup? Use the [hosted demo](https://huggingface.co/spaces/moorlee/hinglish-asr-demo)."
 
 ### Section G — Intended Use & Limitations of Use
 - **Intended use** bullets:
@@ -340,7 +340,7 @@ Bullet list, factual:
       title  = {Srota: A Hinglish ASR model fine-tuned from Qwen3-ASR-0.6B},
       author = {Suraj},
       year   = {2026},
-      url    = {https://huggingface.co/Surajgameramp/srota}
+      url    = {https://huggingface.co/moorlee/srota}
     }
     ```
   - `shi2026qwen3asr` (Qwen3-ASR Technical Report) — REQUIRED (base model).
@@ -373,7 +373,7 @@ Bullet list, factual:
       interpretation, then cohort table, then normalization footnote.
 - [ ] Training curves figure (`figures/training_curves.png`) in Training Procedure.
 - [ ] Quickstart: `pip install qwen-asr==0.0.6`, `from qwen_asr import Qwen3ASRModel`,
-      repo id `Surajgameramp/srota`, `language=None`.
+      repo id `moorlee/srota`, `language=None`.
 - [ ] All WER numbers match the pinned values; deltas use `−` and `pp`.
 - [ ] Demo link present in intro AND quickstart.
 - [ ] Citation block includes Srota + Qwen3-ASR + HiACC + MUCS-2021 (+ Polyglot-Lion).
@@ -381,7 +381,7 @@ Bullet list, factual:
 
 ## 4. Pinned facts quick-reference (single source of truth for executor)
 
-- Repo: `Surajgameramp/srota` · Demo: https://huggingface.co/spaces/Surajgameramp/hinglish-asr-demo
+- Repo: `moorlee/srota` · Demo: https://huggingface.co/spaces/moorlee/hinglish-asr-demo
 - Base: `Qwen/Qwen3-ASR-0.6B`, ~780M params (AuT encoder ~180M + projector + Qwen3-0.6B LLM)
 - Full-parameter FT, no LoRA, no frozen layers
 - Train union: 53,627 utts (HiACC 6.8% / OpenSLR 93.2%); Val 3,282 (518 HiACC + 2,764 OpenSLR)

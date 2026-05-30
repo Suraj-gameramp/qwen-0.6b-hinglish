@@ -11,7 +11,7 @@ Usage:
     python3 scripts/realtime_transcribe.py --model base
 
 `--model` chooses which weights the Modal container loads:
-    v1   = your HF repo `Surajgameramp/qwen3-asr-0.6b-hinglish-hiacc-v1`
+    v1   = your HF repo `moorlee/qwen3-asr-0.6b-hinglish-hiacc-v1`
     v2   = `/ckpt/v2-openslr-h100x2/checkpoint-3000` on the Modal volume
     base = `Qwen/Qwen3-ASR-0.6B` (zero-shot, no fine-tune)
 
@@ -43,7 +43,7 @@ import modal
 SR = 16_000
 
 MODEL_CHOICES = {
-    "v1":   "Surajgameramp/qwen3-asr-0.6b-hinglish-hiacc-v1",
+    "v1":   "moorlee/qwen3-asr-0.6b-hinglish-hiacc-v1",
     "v2":   "/ckpt/v2-openslr-h100x2/checkpoint-3000",
     "base": "Qwen/Qwen3-ASR-0.6B",
 }

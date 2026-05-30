@@ -29,8 +29,8 @@ This is the **general-purpose Hinglish model** of the series. It is trained on t
 Unlike the v2 OpenSLR specialist, **v3 does not regress on conversational speech**: it bridges the two domains instead of trading one off against the other. If you want a single model that just works across conversational and tutorial Hinglish, use this one.
 
 If you instead want to squeeze out the last 1-2 pp in a single, known domain, the domain-specialists are still available:
-- [`Surajgameramp/qwen3-asr-0.6b-hinglish-hiacc-v1`](https://huggingface.co/Surajgameramp/qwen3-asr-0.6b-hinglish-hiacc-v1) — conversational (HiACC) specialist.
-- [`Surajgameramp/qwen3-asr-0.6b-hinglish-openslr104-v2`](https://huggingface.co/Surajgameramp/qwen3-asr-0.6b-hinglish-openslr104-v2) — technical-tutorial (OpenSLR-104) specialist (note: regresses on conversational speech).
+- [`moorlee/qwen3-asr-0.6b-hinglish-hiacc-v1`](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish-hiacc-v1) — conversational (HiACC) specialist.
+- [`moorlee/qwen3-asr-0.6b-hinglish-openslr104-v2`](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish-openslr104-v2) — technical-tutorial (OpenSLR-104) specialist (note: regresses on conversational speech).
 
 ## Result matrix
 
@@ -60,7 +60,7 @@ import torch
 from qwen_asr import Qwen3ASRModel
 
 model = Qwen3ASRModel.from_pretrained(
-    "Surajgameramp/qwen3-asr-0.6b-hinglish-union-v3",
+    "moorlee/qwen3-asr-0.6b-hinglish-union-v3",
     dtype=torch.bfloat16,
     device_map="cuda:0",
     attn_implementation="flash_attention_2",

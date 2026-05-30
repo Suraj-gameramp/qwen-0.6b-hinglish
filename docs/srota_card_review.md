@@ -30,7 +30,7 @@ Every planned section is present and in order: Banner → Badge row → What is 
 - Badge row: all 5 badges present with correct URLs (demo, base, HiACC zenodo, OpenSLR-104, license). Verified each link string.
 - Results led by the WER figure, then table, then cohort table, then normalization footnote — exactly per plan.
 - Training curves figure present in Training Procedure.
-- Quickstart: `qwen-asr==0.0.6`, `from qwen_asr import Qwen3ASRModel`, repo id `Surajgameramp/srota`, `language=None` — all correct.
+- Quickstart: `qwen-asr==0.0.6`, `from qwen_asr import Qwen3ASRModel`, repo id `moorlee/srota`, `language=None` — all correct.
 - Citations include Srota + Qwen3-ASR + Polyglot-Lion + HiACC + MUCS-2021 + Toshniwal — meets the minimum set.
 
 2. **[SHOULD-FIX] Badge color drift from plan.** Plan Section B specifies the Demo badge `...Hinglish_ASR-blue` (blue/yellow HF). Draft line 66 uses `-yellow`:

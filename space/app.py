@@ -3,7 +3,7 @@ import torch
 import gradio as gr
 from qwen_asr import Qwen3ASRModel
 
-MODEL_ID = os.environ.get("MODEL_ID", "Surajgameramp/qwen3-asr-0.6b-hinglish")
+MODEL_ID = os.environ.get("MODEL_ID", "moorlee/qwen3-asr-0.6b-hinglish")
 
 print(f"Loading {MODEL_ID} on CPU (float32)…", flush=True)
 model = Qwen3ASRModel.from_pretrained(
@@ -31,7 +31,7 @@ DESCRIPTION = """
 
 **Srota transcribes Hinglish the way people actually speak it**, keeping English in Latin and Hindi in Devanagari (`मेरा favourite festival Diwali है`), instead of mangling code-switched speech into all-Devanagari transliteration. Record or upload a clip to try it.
 
-Srota is a full-parameter fine-tune of [`Qwen/Qwen3-ASR-0.6B`](https://huggingface.co/Qwen/Qwen3-ASR-0.6B), trained on the union of **HiACC** (conversational) and **OpenSLR-104** (technical tutorials). Full model card: [`Surajgameramp/qwen3-asr-0.6b-hinglish`](https://huggingface.co/Surajgameramp/qwen3-asr-0.6b-hinglish).
+Srota is a full-parameter fine-tune of [`Qwen/Qwen3-ASR-0.6B`](https://huggingface.co/Qwen/Qwen3-ASR-0.6B), trained on the union of **HiACC** (conversational) and **OpenSLR-104** (technical tutorials). Full model card: [`moorlee/qwen3-asr-0.6b-hinglish`](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish).
 
 Built by the team behind [susrota.com](https://www.susrota.com/), a voice-dictation tool (currently English; Srota will power its Hinglish support).
 

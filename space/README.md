@@ -9,12 +9,12 @@ app_file: app.py
 pinned: false
 license: apache-2.0
 models:
-- Surajgameramp/qwen3-asr-0.6b-hinglish
+- moorlee/qwen3-asr-0.6b-hinglish
 ---
 
 # Srota: Hinglish Speech Recognition
 
-A public demo of [`Surajgameramp/qwen3-asr-0.6b-hinglish`](https://huggingface.co/Surajgameramp/qwen3-asr-0.6b-hinglish),
+A public demo of [`moorlee/qwen3-asr-0.6b-hinglish`](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish),
 a full-parameter fine-tune of Qwen3-ASR-0.6B for Hinglish (Hindi-English code-switched) speech.
 
 Srota transcribes Hinglish the way people actually speak it, keeping English in Latin and Hindi in Devanagari instead of collapsing code-switched speech into all-Devanagari transliteration. Record or upload a clip and it returns a mixed-script transcript.

@@ -17,11 +17,11 @@ About a 36% relative WER reduction on conversational Hinglish. Full numbers, coh
 
 ## Models, demo, datasets
 
-- **Recommended model**: [`Surajgameramp/qwen3-asr-0.6b-hinglish`](https://huggingface.co/Surajgameramp/qwen3-asr-0.6b-hinglish) (Srota, the union model)
-- **Conversational specialist**: [`Surajgameramp/qwen3-asr-0.6b-hinglish-hiacc-v1`](https://huggingface.co/Surajgameramp/qwen3-asr-0.6b-hinglish-hiacc-v1)
-- **Tutorial specialist**: [`Surajgameramp/qwen3-asr-0.6b-hinglish-openslr104-v2`](https://huggingface.co/Surajgameramp/qwen3-asr-0.6b-hinglish-openslr104-v2)
-- **Live demo (free)**: <https://huggingface.co/spaces/Surajgameramp/hinglish-asr-demo>
-- **Collection (all of the above)**: [Hinglish ASR family](https://huggingface.co/collections/Surajgameramp/hinglish-asr-qwen3-asr-06b-fine-tunes-6a1a79f2faffc4321317fb19)
+- **Recommended model**: [`moorlee/qwen3-asr-0.6b-hinglish`](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish) (Srota, the union model)
+- **Conversational specialist**: [`moorlee/qwen3-asr-0.6b-hinglish-hiacc-v1`](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish-hiacc-v1)
+- **Tutorial specialist**: [`moorlee/qwen3-asr-0.6b-hinglish-openslr104-v2`](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish-openslr104-v2)
+- **Live demo (free)**: <https://huggingface.co/spaces/moorlee/hinglish-asr-demo>
+- **Collection (all of the above)**: [Hinglish ASR family](https://huggingface.co/collections/moorlee/hinglish-asr-qwen3-asr-06b-fine-tunes-6a1a79f2faffc4321317fb19)
 
 ### Training data
 
@@ -58,7 +58,7 @@ modal run modal_app.py::evaluate_v3 --batch-size 32
 modal run modal_app.py::push_v3
 ```
 
-All the model card content (Srota, v1, v2) is in [`docs/`](docs/). Figures rendered on the HF pages live in the public [`Surajgameramp/srota-assets`](https://huggingface.co/datasets/Surajgameramp/srota-assets) dataset.
+All the model card content (Srota, v1, v2) is in [`docs/`](docs/). Figures rendered on the HF pages live in the public [`moorlee/srota-assets`](https://huggingface.co/datasets/moorlee/srota-assets) dataset.
 
 ## Try the model locally
 

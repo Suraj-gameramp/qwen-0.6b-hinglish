@@ -1177,7 +1177,7 @@ class RealtimeASR:
 def push_v1_to_hub(
     output_dir: str = "/ckpt/v1-hiacc-h100x2",
     checkpoint: str = "",                                         # "" = read from eval.json
-    repo_id: str = "Surajgameramp/qwen3-asr-0.6b-hinglish-hiacc-v1",
+    repo_id: str = "moorlee/qwen3-asr-0.6b-hinglish-hiacc-v1",
     private: bool = False,
 ):
     """Upload the best fine-tuned checkpoint + model card to Hugging Face Hub."""
@@ -1546,7 +1546,7 @@ def push(checkpoint: str = "", private: bool = False):
 def push_v2_to_hub(
     output_dir: str = "/ckpt/v2-openslr-h100x2",
     checkpoint: str = "",                                              # "" = best by eval_loss
-    repo_id: str = "Surajgameramp/qwen3-asr-0.6b-hinglish-openslr104-v2",
+    repo_id: str = "moorlee/qwen3-asr-0.6b-hinglish-openslr104-v2",
     private: bool = False,
 ):
     """Upload the best v2 (OpenSLR-104) checkpoint + model card to Hugging Face Hub."""
@@ -1628,7 +1628,7 @@ def push_v2(checkpoint: str = "", private: bool = False):
 def push_v3_to_hub(
     output_dir: str = "/ckpt/v3-union-h100x2",
     checkpoint: str = "",                                              # "" = best by eval_loss
-    repo_id: str = "Surajgameramp/qwen3-asr-0.6b-hinglish-union-v3",
+    repo_id: str = "moorlee/qwen3-asr-0.6b-hinglish-union-v3",
     private: bool = False,
 ):
     """Upload the best v3 (union) checkpoint + model card to Hugging Face Hub."""

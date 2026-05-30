@@ -52,16 +52,16 @@ model-index:
 ---
 
 <div align="center">
-  <img src="https://huggingface.co/datasets/Surajgameramp/qwen3-asr-0.6b-hinglish-assets/resolve/main/v2_banner.png" alt="Srota-Tutorial: Hinglish Tutorial ASR" width="100%"/>
+  <img src="https://huggingface.co/datasets/moorlee/qwen3-asr-0.6b-hinglish-assets/resolve/main/v2_banner.png" alt="Srota-Tutorial: Hinglish Tutorial ASR" width="100%"/>
 </div>
 
 # Srota-Tutorial (श्रोत): Hinglish Tutorial Specialist (OpenSLR-104)
 
-**Srota-Tutorial is the OpenSLR-104 tutorial specialist sibling of [Srota](https://huggingface.co/Surajgameramp/qwen3-asr-0.6b-hinglish).** It is a full-parameter fine-tune of [Qwen/Qwen3-ASR-0.6B](https://huggingface.co/Qwen/Qwen3-ASR-0.6B) on Hindi-English spoken-tutorial speech (lectures, software walkthroughs, technical instruction). It cuts WER on OpenSLR-104 tutorials from 50.66% to **32.83%** (a 35% relative drop), but it pays for that with a measurable regression on conversational Hinglish.
+**Srota-Tutorial is the OpenSLR-104 tutorial specialist sibling of [Srota](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish).** It is a full-parameter fine-tune of [Qwen/Qwen3-ASR-0.6B](https://huggingface.co/Qwen/Qwen3-ASR-0.6B) on Hindi-English spoken-tutorial speech (lectures, software walkthroughs, technical instruction). It cuts WER on OpenSLR-104 tutorials from 50.66% to **32.83%** (a 35% relative drop), but it pays for that with a measurable regression on conversational Hinglish.
 
 <div align="center">
 
-### ▶️ [Try the union model in your browser](https://huggingface.co/spaces/Surajgameramp/hinglish-asr-demo)
+### ▶️ [Try the union model in your browser](https://huggingface.co/spaces/moorlee/hinglish-asr-demo)
 
 Srota (the union model) covers both tutorial and conversational speech; Srota-Tutorial is the tutorial specialist that gives up conversational quality for in-domain gains.
 
@@ -69,16 +69,16 @@ Srota (the union model) covers both tutorial and conversational speech; Srota-Tu
 
 <div align="center">
 
-[![Demo](https://img.shields.io/badge/🤗_Demo-Hinglish_ASR-yellow)](https://huggingface.co/spaces/Surajgameramp/hinglish-asr-demo)
+[![Demo](https://img.shields.io/badge/🤗_Demo-Hinglish_ASR-yellow)](https://huggingface.co/spaces/moorlee/hinglish-asr-demo)
 [![Base model](https://img.shields.io/badge/Base-Qwen3--ASR--0.6B-6633cc)](https://huggingface.co/Qwen/Qwen3-ASR-0.6B)
 [![OpenSLR-104](https://img.shields.io/badge/Data-OpenSLR--104-green)](https://openslr.org/104/)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue)](https://www.apache.org/licenses/LICENSE-2.0)
 [![Project](https://img.shields.io/badge/Project-susrota.com-orange)](https://www.susrota.com/)
-[![Family](https://img.shields.io/badge/Family-Srota-ff69b4)](https://huggingface.co/Surajgameramp/qwen3-asr-0.6b-hinglish)
+[![Family](https://img.shields.io/badge/Family-Srota-ff69b4)](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish)
 
 </div>
 
-> ⚠️ **This is a specialist.** Srota-Tutorial is tuned for technical tutorial speech only. On conversational Hinglish it is **+12.91 pp WORSE** than the base model on HiACC (37.64% vs 24.73%). For general Hinglish, use [Srota](https://huggingface.co/Surajgameramp/qwen3-asr-0.6b-hinglish) instead.
+> ⚠️ **This is a specialist.** Srota-Tutorial is tuned for technical tutorial speech only. On conversational Hinglish it is **+12.91 pp WORSE** than the base model on HiACC (37.64% vs 24.73%). For general Hinglish, use [Srota](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish) instead.
 
 ## ℹ️ What is Srota-Tutorial?
 
@@ -86,7 +86,7 @@ Srota-Tutorial is an automatic speech recognition (ASR) model for **Hindi-Englis
 
 **On the size.** The base model's name, Qwen3-ASR-0.6B, refers to its LLM backbone (Qwen3-0.6B, ~600M parameters). The full speech model adds a ~180M AuT audio encoder and a small projector, for ~780M parameters total. Srota-Tutorial is a full-parameter fine-tune of all of them: there are no LoRA adapters and no frozen layers, every native weight is updated. The extra ~180M over the "0.6B" name is the audio encoder, not a LoRA adapter.
 
-**Sibling model.** For general Hinglish (conversational + tutorial), see [Srota](https://huggingface.co/Surajgameramp/qwen3-asr-0.6b-hinglish), the union model. Srota-Tutorial only exists to document the in-domain ceiling and the cross-domain cost of single-domain fine-tuning; Srota is the shippable generalist.
+**Sibling model.** For general Hinglish (conversational + tutorial), see [Srota](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish), the union model. Srota-Tutorial only exists to document the in-domain ceiling and the cross-domain cost of single-domain fine-tuning; Srota is the shippable generalist.
 
 **Project.** Built by the team behind [susrota.com](https://www.susrota.com/), a voice-dictation tool that currently runs in English. Srota will power its upcoming Hinglish support; the live product does not run this model yet.
 
@@ -96,12 +96,12 @@ Srota-Tutorial is an automatic speech recognition (ASR) model for **Hindi-Englis
 - **Preserves natural code-switch.** Keeps English jargon in Latin (`tutorial`, `print button`, `slides handouts notes`) and Hindi narration in Devanagari, instead of romanizing or hallucinating English continuations like the base.
 - **Compact.** ~780M parameters total (Qwen3-0.6B LLM + ~180M AuT audio encoder + projector); single-GPU bf16 inference.
 - **Honest lineage.** Full-parameter fine-tune of Qwen3-ASR-0.6B: no frozen layers, no LoRA adapters. The extra ~180M over the "0.6B" name is the audio encoder, not LoRA.
-- **Specialist trade-off (read this).** Conversational HiACC test WER goes from 24.73% (base) to **37.64%** (**+12.91 pp WORSE than base**). This is a classic single-domain negative-transfer regression, and it is the entire reason the union model [Srota](https://huggingface.co/Surajgameramp/qwen3-asr-0.6b-hinglish) exists.
+- **Specialist trade-off (read this).** Conversational HiACC test WER goes from 24.73% (base) to **37.64%** (**+12.91 pp WORSE than base**). This is a classic single-domain negative-transfer regression, and it is the entire reason the union model [Srota](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish) exists.
 - **Open.** Apache-2.0; training data is OpenSLR-104 (CC BY 4.0).
 
 ## ⚠️ Read before downloading
 
-**Srota-Tutorial is a domain specialist, not a drop-in replacement for the base model.** On conversational Hinglish (HiACC test), it scores **37.64% WER, which is +12.91 pp WORSE than Qwen3-ASR-0.6B's 24.73%**. If your audio is anything other than technical Hindi-English tutorial speech (lectures, software walkthroughs), use [Srota](https://huggingface.co/Surajgameramp/qwen3-asr-0.6b-hinglish) (the union model) or the base [Qwen3-ASR-0.6B](https://huggingface.co/Qwen/Qwen3-ASR-0.6B) instead.
+**Srota-Tutorial is a domain specialist, not a drop-in replacement for the base model.** On conversational Hinglish (HiACC test), it scores **37.64% WER, which is +12.91 pp WORSE than Qwen3-ASR-0.6B's 24.73%**. If your audio is anything other than technical Hindi-English tutorial speech (lectures, software walkthroughs), use [Srota](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish) (the union model) or the base [Qwen3-ASR-0.6B](https://huggingface.co/Qwen/Qwen3-ASR-0.6B) instead.
 
 Additionally, because OpenSLR-104 transcripts are lowercase and unpunctuated by design, **this model emits lowercase, no-punctuation, mixed-script text**. It is not production-formatted output.
 
@@ -120,7 +120,7 @@ In **A**, the base ignores the actual short Hindi phrase and hallucinates a flue
 ## 📊 Results
 
 <div align="center">
-  <img src="https://huggingface.co/datasets/Surajgameramp/qwen3-asr-0.6b-hinglish-assets/resolve/main/v2_wer_comparison.png" alt="WER comparison: base Qwen3-ASR-0.6B vs Srota-Tutorial on OpenSLR-104 (in-domain) and HiACC (cross-domain)" width="80%"/>
+  <img src="https://huggingface.co/datasets/moorlee/qwen3-asr-0.6b-hinglish-assets/resolve/main/v2_wer_comparison.png" alt="WER comparison: base Qwen3-ASR-0.6B vs Srota-Tutorial on OpenSLR-104 (in-domain) and HiACC (cross-domain)" width="80%"/>
 </div>
 
 <p align="center"><em>WER (%) on OpenSLR-104 test (in-domain, tutorial) and HiACC test (cross-domain, conversational). Srota-Tutorial wins big in-domain (50.66 to 32.83) but loses badly out-of-domain (24.73 to 37.64, +12.91 pp WORSE than base). Lower is better.</em></p>
@@ -132,7 +132,7 @@ In **A**, the base ignores the actual short Hindi phrase and hallucinates a flue
 
 > **Normalization.** WER is computed with `jiwer` after a symmetric normalizer (lowercase + strip punctuation) is applied to both predictions and references. These numbers are **not directly comparable** to MUCS-2021 published baselines, which use a different (Kaldi-style) normalization.
 
-The OpenSLR-104 gain is real and large, but the HiACC regression is also real and large: a tutorial-only fine-tune at this scale meaningfully damages conversational performance. This is the central evidence that motivates the union model [Srota](https://huggingface.co/Surajgameramp/qwen3-asr-0.6b-hinglish).
+The OpenSLR-104 gain is real and large, but the HiACC regression is also real and large: a tutorial-only fine-tune at this scale meaningfully damages conversational performance. This is the central evidence that motivates the union model [Srota](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish).
 
 ## 🚀 Quickstart
 
@@ -147,7 +147,7 @@ import torch
 from qwen_asr import Qwen3ASRModel
 
 model = Qwen3ASRModel.from_pretrained(
-    "Surajgameramp/qwen3-asr-0.6b-hinglish-openslr104-v2",
+    "moorlee/qwen3-asr-0.6b-hinglish-openslr104-v2",
     dtype=torch.bfloat16,
     device_map="cuda:0",
     attn_implementation="flash_attention_2",
@@ -173,7 +173,7 @@ print(results[0].text)
 
 **Out of scope / not recommended**
 
-- **General conversational Hinglish.** This model is **+12.91 pp WORSE** than the base on HiACC. Use [Srota](https://huggingface.co/Surajgameramp/qwen3-asr-0.6b-hinglish) (the union model) for conversational or mixed-domain audio.
+- **General conversational Hinglish.** This model is **+12.91 pp WORSE** than the base on HiACC. Use [Srota](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish) (the union model) for conversational or mixed-domain audio.
 - Production text needing case or punctuation without a post-processing layer.
 - Monolingual pure-Hindi or pure-English ASR.
 - High-stakes uses (medical, legal) without human review.
@@ -215,7 +215,7 @@ Srota-Tutorial is a **full-parameter fine-tune** of Qwen3-ASR-0.6B: no frozen la
 **Data format.** Targets use the language-agnostic prefix `language None<asr_text>...` (following Polyglot-Lion / Toshniwal et al., 2018), with transcripts kept in OpenSLR-104's native lowercase mixed Devanagari + Latin script.
 
 <div align="center">
-  <img src="https://huggingface.co/datasets/Surajgameramp/qwen3-asr-0.6b-hinglish-assets/resolve/main/v2_training_curves.png" alt="Srota-Tutorial training curves: train/eval loss, gradient norm, learning rate" width="90%"/>
+  <img src="https://huggingface.co/datasets/moorlee/qwen3-asr-0.6b-hinglish-assets/resolve/main/v2_training_curves.png" alt="Srota-Tutorial training curves: train/eval loss, gradient norm, learning rate" width="90%"/>
 </div>
 
 <p align="center"><em>Training/eval loss, gradient norm, and learning rate over 4,690 steps; eval_loss bottoms out at step 3000 (epoch 1.92, eval_loss 0.1436), with the later epoch showing no further improvement.</em></p>
@@ -226,11 +226,11 @@ Srota-Tutorial is a **full-parameter fine-tune** of Qwen3-ASR-0.6B: no frozen la
 
 **In-domain (OpenSLR-104 test).** WER drops from **50.66% (base)** to **32.83% (Srota-Tutorial)**, a −17.83 pp absolute / −35% relative improvement. This is the headline in-domain result.
 
-**Cross-domain (HiACC test).** WER goes from **24.73% (base)** to **37.64% (Srota-Tutorial)**, a **+12.91 pp regression**: this model is meaningfully worse than the base on conversational Hinglish. This is the **why-Srota-exists** result: a tutorial-only fine-tune at this scale negatively transfers to conversational speech, which is precisely what the union model [Srota](https://huggingface.co/Surajgameramp/qwen3-asr-0.6b-hinglish) was built to fix (it converts that +12.91 pp HiACC regression into a −8.88 pp improvement).
+**Cross-domain (HiACC test).** WER goes from **24.73% (base)** to **37.64% (Srota-Tutorial)**, a **+12.91 pp regression**: this model is meaningfully worse than the base on conversational Hinglish. This is the **why-Srota-exists** result: a tutorial-only fine-tune at this scale negatively transfers to conversational speech, which is precisely what the union model [Srota](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish) was built to fix (it converts that +12.91 pp HiACC regression into a −8.88 pp improvement).
 
 ## ⚠️ Limitations & Biases
 
-- **Cross-domain regression.** On conversational HiACC, Srota-Tutorial is **+12.91 pp worse** than the base Qwen3-ASR-0.6B (37.64% vs 24.73%). Do not use it on non-tutorial audio; use [Srota](https://huggingface.co/Surajgameramp/qwen3-asr-0.6b-hinglish) instead.
+- **Cross-domain regression.** On conversational HiACC, Srota-Tutorial is **+12.91 pp worse** than the base Qwen3-ASR-0.6B (37.64% vs 24.73%). Do not use it on non-tutorial audio; use [Srota](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish) instead.
 - **Lowercase, no-punctuation output.** OpenSLR-104 transcripts are lowercase and unpunctuated by design, so the model emits the same. It is not production-formatted; a casing/punctuation post-processor is required for downstream display.
 - **In-domain WER is still substantial (32.83%).** Dense technical vocabulary (commands, file paths, version strings) and rapid Hindi-English code-switching remain hard for a ~780M-parameter model, even after a 35% relative reduction.
 - **Not comparable to MUCS-2021 published numbers** without matching their Kaldi-style normalization.
@@ -256,7 +256,7 @@ If you use Srota-Tutorial, please cite this model and the underlying works.
   title  = {Srota-Tutorial: A Hinglish tutorial-speech ASR model fine-tuned from Qwen3-ASR-0.6B on OpenSLR-104},
   author = {Suraj},
   year   = {2026},
-  url    = {https://huggingface.co/Surajgameramp/qwen3-asr-0.6b-hinglish-openslr104-v2}
+  url    = {https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish-openslr104-v2}
 }
 
 @article{shi2026qwen3asr,
