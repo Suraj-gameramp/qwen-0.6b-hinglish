@@ -74,6 +74,16 @@ model-index:
 
 </div>
 
+## 🧬 Srota model family
+
+| Variant | Best for | Specialty |
+|---|---|---|
+| **[Srota](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish)** (union) | General Hinglish (recommended default) | conversational + tutorial |
+| **[Srota-Conv](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish-hiacc-v1)** | Conversational Hinglish only | HiACC specialist |
+| **[Srota-Tutorial](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish-openslr104-v2)** | Technical tutorial speech only | OpenSLR-104 specialist |
+
+*You are viewing **Srota** (the union model, recommended for general use).*
+
 ## ℹ️ What is Srota?
 
 Srota is an automatic speech recognition (ASR) model for **Hinglish** (Hindi-English code-switched speech) that transcribes into natural **mixed Devanagari + Latin** script. It is a **full-parameter fine-tune of [Qwen/Qwen3-ASR-0.6B](https://huggingface.co/Qwen/Qwen3-ASR-0.6B)**, trained on the union of conversational and technical-tutorial Hinglish speech. It improves over the base model on both domains at once: **−8.88 pp** word error rate (WER) on conversational speech and **−15.60 pp** on tutorial speech.

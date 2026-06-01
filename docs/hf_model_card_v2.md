@@ -80,6 +80,16 @@ Srota (the union model) covers both tutorial and conversational speech; Srota-Tu
 
 > ⚠️ **This is a specialist.** Srota-Tutorial is tuned for technical tutorial speech only. On conversational Hinglish it is **+12.91 pp WORSE** than the base model on HiACC (37.64% vs 24.73%). For general Hinglish, use [Srota](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish) instead.
 
+## 🧬 Srota model family
+
+| Variant | Best for | Specialty |
+|---|---|---|
+| **[Srota](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish)** (union) | General Hinglish (recommended default) | conversational + tutorial |
+| **[Srota-Conv](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish-hiacc-v1)** | Conversational Hinglish only | HiACC specialist |
+| **[Srota-Tutorial](https://huggingface.co/moorlee/qwen3-asr-0.6b-hinglish-openslr104-v2)** | Technical tutorial speech only | OpenSLR-104 specialist |
+
+*You are viewing **Srota-Tutorial** (OpenSLR-104 tutorial specialist).*
+
 ## ℹ️ What is Srota-Tutorial?
 
 Srota-Tutorial is an automatic speech recognition (ASR) model for **Hindi-English code-switched tutorial speech**: software walkthroughs, lectures, and step-by-step technical instruction from the [IIT Bombay Spoken Tutorial](https://spoken-tutorial.org/) project, as packaged in OpenSLR-104 / MUCS-2021. It is a **full-parameter fine-tune of [Qwen/Qwen3-ASR-0.6B](https://huggingface.co/Qwen/Qwen3-ASR-0.6B)** trained on OpenSLR-104 alone.
